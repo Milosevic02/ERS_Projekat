@@ -1,5 +1,7 @@
 Projektni zadatak 3 – Smart thermoregulator
 
+//izmena//
+
 Potrebno je napraviti dizajn sistema, arhitekturu sistema, implementirati i istestirati rešenje koje simulira rad pametnog uređaja za kontrolu temperature. 
 Sistem sadrži jednu centralnu peć čiji se rad kontroliše, regulator temperature i više uređaja za očitavanje temperature prostorija
 

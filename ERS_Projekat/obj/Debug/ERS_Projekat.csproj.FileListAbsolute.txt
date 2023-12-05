@@ -1,0 +1,8 @@
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\ERS_Projekat.exe.config
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\ERS_Projekat.exe
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\ERS_Projekat.pdb
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\obj\Debug\ERS_Projekat.csproj.AssemblyReference.cache
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\obj\Debug\ERS_Projekat.csproj.SuggestedBindingRedirects.cache
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\obj\Debug\ERS_Projekat.csproj.CoreCompileInputs.cache
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\obj\Debug\ERS_Projekat.exe
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\obj\Debug\ERS_Projekat.pdb

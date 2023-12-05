@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace ERS_Projekat
 {
-    internal class Program
+    internal class Device : IDevice
     {
-        static void Main(string[] args)
+        int id;
+
+        public int CheckTemperature()
         {
-            Console.WriteLine("Press any key to continue...");
-            Console.ReadKey();
+            throw new NotImplementedException();
         }
     }
 }

@@ -14,5 +14,10 @@ namespace ERS_Projekat
         {
             throw new NotImplementedException();
         }
+
+        public int SendTemperature()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

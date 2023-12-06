@@ -34,6 +34,11 @@ namespace ERS_Projekat
             throw new NotImplementedException();
         }
 
+        public bool SaveInDatabase()
+        {
+            throw new NotImplementedException();
+        }
+
 
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,15 +10,19 @@ namespace ERS_Projekat
     internal class Heater : IHeater
     {
 
-        int temperature;
         DateTime startTime;
         TimeSpan elapsedTime;
         double fuelUsed;
-        
-        public int CheckTemperature()
+        double fuelConstant;
+        readonly string logFilePath = "log.txt";
+
+
+        public Heater(double fuelConstant)
         {
-            throw new NotImplementedException();
+            this.fuelConstant = fuelConstant;
         }
+
+        public double FuelConstant { get => fuelConstant; set => fuelConstant = value; }
 
         public string GetHeaterDetails()
         {
@@ -26,12 +31,35 @@ namespace ERS_Projekat
 
         public bool TurnOff()
         {
-            throw new NotImplementedException();
+            elapsedTime = DateTime.Now - startTime;
+            fuelUsed = fuelConstant*elapsedTime.TotalSeconds;
+            Console.WriteLine(fuelUsed);
+            WriteToFile(logFilePath);
+            return true;
         }
 
         public bool TurnOn()
         {
-            throw new NotImplementedException();
+            startTime = DateTime.Now;
+            fuelUsed = 0;
+            return true;
+        }
+
+        public bool WriteToFile(string logFilePath)
+        {
+            try
+            {
+                using (StreamWriter writer = new StreamWriter("log.txt", true))
+                {
+                    writer.WriteLine(GetHeaterDetails() + "\n");
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error appending to the file: {ex.Message}");
+                return false;
+            }
+            return true;
         }
 
 

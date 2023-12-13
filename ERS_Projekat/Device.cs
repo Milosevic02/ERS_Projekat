@@ -8,7 +8,12 @@ namespace ERS_Projekat
 {
     internal class Device : IDevice
     {
-        int id;
+        readonly int id;
+
+        public Device(int id)
+        {
+            this.id = id;
+        }
 
         public int CheckTemperature()
         {

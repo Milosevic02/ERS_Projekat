@@ -6,12 +6,10 @@ using System.Threading.Tasks;
 
 namespace ERS_Projekat
 {
-    internal interface IHeater
+    internal interface IUIHandler
     {
-        bool TurnOn();
-        bool TurnOff();
-        string GetHeaterDetails();
+        void Menu();
 
-        bool WriteToFile(string filePath);
+        void GetCommand();
     }
 }

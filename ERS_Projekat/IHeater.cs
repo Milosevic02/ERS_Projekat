@@ -12,7 +12,6 @@ namespace ERS_Projekat
         bool TurnOff();
         int CheckTemperature();
         string GetHeaterDetails();
-
-        bool SaveInDatabase();
+        bool WriteToFile(string filePath);
     }
 }

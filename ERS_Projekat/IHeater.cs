@@ -10,9 +10,8 @@ namespace ERS_Projekat
     {
         bool TurnOn();
         bool TurnOff();
-        string GetHeaterDetails();
         int CheckTemperature();
-
+        string GetHeaterDetails();
         bool WriteToFile(string filePath);
     }
 }

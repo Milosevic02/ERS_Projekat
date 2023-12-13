@@ -62,6 +62,9 @@ namespace ERS_Projekat
             return true;
         }
 
-
+        public int CheckTemperature()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

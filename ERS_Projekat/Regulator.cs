@@ -13,7 +13,7 @@ namespace ERS_Projekat
         double nightTemperature;
         double dayStart;
         double dayEnd;
-        List<Device> devices;
+        List<Device> devices = new List<Device>();
 
 
 
@@ -59,11 +59,54 @@ namespace ERS_Projekat
             return true;
         }
 
+        public void AddDevice(Device d)
+        {
+            devices.Add(d);
+        }
+
+        public void RemoveDevice(Device d)
+        {
+            devices.Remove(d);
+        }
 
 
         public bool TemperatureControl()
         {
-            throw new NotImplementedException();
+            double avgtemp = 0;
+            int i = 0;
+            foreach (Device d in devices)
+            {
+                avgtemp = d.CheckTemperature();
+                i++;
+            };
+            avgtemp = avgtemp / i;
+            if (mode)
+            {
+                if(avgtemp > dayTemperature){
+                    //smanjuj temperaturu
+                    return true;
+                    
+                }else if(avgtemp < dayTemperature)
+                {
+                    //povecaj temperaturu
+                    return true;
+                }
+            }
+            else
+            {
+                if (avgtemp > nightTemperature)
+                {
+                    //smanjuj temperaturu
+                    return true;
+
+                }
+                else if (avgtemp < nightTemperature)
+                {
+                    //povecaj temperaturu
+                    return true;
+                }
+            }
+            return true;
         }
 
         public bool SendHeaterIsOn()

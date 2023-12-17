@@ -15,6 +15,10 @@ namespace ERS_Projekat
 
         bool SaveEvent(); // Cuvanje svih dogadjaja u txt fajl
 
+        bool AddDevice(Device d);
+
+        bool RemoveDevice(Device d);
+
 
 
 

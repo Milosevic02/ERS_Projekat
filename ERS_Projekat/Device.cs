@@ -15,9 +15,13 @@ namespace ERS_Projekat
             this.id = id;
         }
 
-        public int CheckTemperature()
+        public double CheckTemperature(Regulator r)
         {
-            throw new NotImplementedException();
+            if (r.Mode) // Ako je true noc je
+            {
+                return r.NightTemperature;
+            }
+            return r.DayTemperature;
         }
 
         public int SendTemperature()

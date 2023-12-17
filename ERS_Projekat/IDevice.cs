@@ -8,7 +8,6 @@ namespace ERS_Projekat
 {
     internal interface IDevice
     {
-        double CheckTemperature(Regulator r);
-        int SendTemperature(); ///Slanje temperature regulatoru
+        double CheckTemperature();
     }
 }

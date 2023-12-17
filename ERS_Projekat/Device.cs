@@ -9,24 +9,17 @@ namespace ERS_Projekat
     internal class Device : IDevice
     {
         readonly int id;
+        double temperature;
 
         public Device(int id)
         {
             this.id = id;
         }
 
-        public double CheckTemperature(Regulator r)
+        public double CheckTemperature()
         {
-            if (r.Mode) // Ako je true noc je
-            {
-                return r.NightTemperature;
-            }
-            return r.DayTemperature;
+            return temperature;
         }
 
-        public int SendTemperature()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

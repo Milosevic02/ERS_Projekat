@@ -13,6 +13,7 @@ namespace ERS_Projekat
         double nightTemperature;
         double dayStart;
         double dayEnd;
+        List<Device> devices;
 
 
 
@@ -33,10 +34,34 @@ namespace ERS_Projekat
 
         public bool Settings()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Izaberi trenutan rezim rada (0 - dnevni rezim 1 - nocni rezim)");
+            int pom = int.Parse(Console.ReadLine());
+            if (pom == 1)
+            {
+                mode = true;
+            }
+            else if (pom == 0)
+            {
+                mode = false;
+            }
+            else
+            {
+                return false;
+            }
+            Console.WriteLine("Unesi od kada ti zapocinje dan:");
+            dayStart = Double.Parse(Console.ReadLine());
+            Console.WriteLine("Unesi do kada ti traje dan:");
+            dayEnd = Double.Parse(Console.ReadLine());
+            Console.WriteLine("Unesi koju temperaturu zelis preko dana:");
+            dayTemperature = Double.Parse(Console.ReadLine());
+            Console.WriteLine("Unesi koju temperaturu zelis preko noci:");
+            nightTemperature = Double.Parse(Console.ReadLine());
+            return true;
         }
 
-        public bool ChangeTemperature()
+
+
+        public bool TemperatureControl()
         {
             throw new NotImplementedException();
         }

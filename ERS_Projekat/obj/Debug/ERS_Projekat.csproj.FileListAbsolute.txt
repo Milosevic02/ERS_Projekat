@@ -6,3 +6,10 @@ C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\obj\Debug\ERS_Projekat.cs
 C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\obj\Debug\ERS_Projekat.csproj.CoreCompileInputs.cache
 C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\obj\Debug\ERS_Projekat.exe
 C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\obj\Debug\ERS_Projekat.pdb
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\ERS_Projekat.exe.config
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\ERS_Projekat.exe
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\ERS_Projekat.pdb
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\obj\Debug\ERS_Projekat.csproj.AssemblyReference.cache
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\obj\Debug\ERS_Projekat.csproj.CoreCompileInputs.cache
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\obj\Debug\ERS_Projekat.exe
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\obj\Debug\ERS_Projekat.pdb

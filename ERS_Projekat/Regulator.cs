@@ -13,6 +13,7 @@ namespace ERS_Projekat
         double nightTemperature;
         double dayStart;
         double dayEnd;
+        List<Device> devices;
 
         public bool Settings()
         {
@@ -41,7 +42,9 @@ namespace ERS_Projekat
             return true;
         }
 
-        public bool ChangeTemperature()
+
+
+        public bool TemperatureControl()
         {
             throw new NotImplementedException();
         }

@@ -87,7 +87,7 @@ namespace ERS_Projekat
         }
 
 
-        public bool TemperatureControl()
+        public bool TemperatureControl(Heater h)
         {
             double avgtemp = 0;
             int i = 0;
@@ -100,12 +100,12 @@ namespace ERS_Projekat
             if (mode)
             {
                 if(avgtemp > dayTemperature){
-                    //smanjuj temperaturu
+                    h.TurnOff();
                     return true;
                     
                 }else if(avgtemp < dayTemperature)
                 {
-                    //povecaj temperaturu
+                    h.TurnOn();
                     return true;
                 }
             }
@@ -113,22 +113,25 @@ namespace ERS_Projekat
             {
                 if (avgtemp > nightTemperature)
                 {
-                    //smanjuj temperaturu
+                    h.TurnOff() ;
                     return true;
 
                 }
                 else if (avgtemp < nightTemperature)
                 {
-                    //povecaj temperaturu
+                    h.TurnOn() ;
                     return true;
                 }
             }
             return true;
         }
 
-        public bool SendHeaterIsOn()
+        public void SendHeaterIsOn()
         {
-            throw new NotImplementedException();
+            foreach (Device d in devices)
+            {
+                d.Temperature = d.Temperature + 0.01;
+            };
         }
         public bool SaveEvent()
         {

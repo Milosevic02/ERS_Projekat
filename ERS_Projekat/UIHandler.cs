@@ -12,7 +12,7 @@ namespace ERS_Projekat
         readonly int commandNum = 5;
         bool commandEnd = false;
         readonly FunctionHandler functionHandler = new FunctionHandler();
-        
+
         public void Menu()
         {
             Console.WriteLine("[= = = = SISTEM ZA REGULACIJU TOPLOTE = = = =]");
@@ -68,7 +68,7 @@ namespace ERS_Projekat
                             break;
 
                         case 3:
-                            Console.WriteLine("You selected Case 3");
+                            functionHandler.Regulate();
                             commandEnd = true;
                             break;
 

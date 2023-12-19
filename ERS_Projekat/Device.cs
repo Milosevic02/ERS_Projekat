@@ -17,10 +17,11 @@ namespace ERS_Projekat
         }
 
         public int Id { get => id; set => id = value; }
+        public double Temperature { get => temperature; set => temperature = value; }
 
         public double CheckTemperature()
         {
-            return temperature;
+            return Temperature;
         }
 
     }

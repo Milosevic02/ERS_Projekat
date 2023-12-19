@@ -13,7 +13,7 @@ namespace ERS_Projekat
         double nightTemperature;
         double dayStart;
         double dayEnd;
-        Dictionary<int, double> devices = new Dictionary<int, double>();
+        List<Device> devices = new List<Device>();
 
 
 
@@ -61,20 +61,27 @@ namespace ERS_Projekat
 
         public bool AddDevice(Device d)
         {
-            if (devices.ContainsKey(d.Id))
+            foreach(Device device in devices)
             {
-                return false;
+                if(device.Id == d.Id)
+                {
+                    return false;
+                }
             }
-            devices.Add(d.Id,d.CheckTemperature());
+            devices.Add(d);
             return true;
         }
 
+
         public bool RemoveDevice(Device d)
         {
-            if (devices.ContainsKey(d.Id))
+            foreach (Device device in devices)
             {
-                devices.Remove(d.Id);
-                return true;
+                if (device.Id == d.Id)
+                {
+                    devices.Remove(d);
+                    return true;
+                }
             }
             return false;
         }
@@ -84,9 +91,9 @@ namespace ERS_Projekat
         {
             double avgtemp = 0;
             int i = 0;
-            foreach (KeyValuePair<int,double> d in devices)
+            foreach (Device d in devices)
             {
-                avgtemp = d.Value;
+                avgtemp += d.CheckTemperature();
                 i++;
             };
             avgtemp = avgtemp / i;

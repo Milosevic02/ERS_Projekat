@@ -102,10 +102,10 @@ namespace ERS_Projekat
         public void Regulate()
         {
             int checkCounter = 0;
-            int onCounter = 0; //counter starts when heater turns on 
+            int onCounter = 0; // counter starts when heater turns on
+
             while (true)
             {
-                
                 if (Console.KeyAvailable)
                 {
                     ConsoleKeyInfo key = Console.ReadKey(intercept: true);
@@ -116,8 +116,7 @@ namespace ERS_Projekat
                         break;
                     }
                 }
-                
-                
+
                 checkCounter++;
 
                 if (checkTime == checkCounter)
@@ -126,17 +125,23 @@ namespace ERS_Projekat
                     checkCounter = 0;
                 }
 
-                if (heater.Flag) onCounter++;
-                else onCounter = 0;
-
-                if(tempChangeTime == onCounter)
+                if (heater.Flag)
                 {
-                    regulator.SendHeaterIsOn();
-                    onCounter = 0;
+                    onCounter++;
+                    if (tempChangeTime == onCounter)
+                    {
+                        regulator.SendHeaterIsOn(heater);
+                        onCounter = 0; // Reset the onCounter only after sending the signal
+                    }
                 }
-                Thread.Sleep(1000);
+                else
+                {
+                    onCounter = 0; // Reset the onCounter if the heater is off
+                }
+
+                Thread.Sleep(10);
             }
-            
+
         }
     }
 }

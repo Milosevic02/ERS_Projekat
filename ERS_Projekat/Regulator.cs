@@ -101,16 +101,25 @@ namespace ERS_Projekat
             if (!mode)
             {
                 if(avgtemp > dayTemperature){
-                    h.TurnOff();
+                    if (h.Flag)
+                    {
+                        h.TurnOff();
+                    }
                     SaveEvent(avgtemp, false);
                     return true;
                     
                 }else if(avgtemp < dayTemperature)
                 {
-                    h.TurnOn();
+                    if (!h.Flag)
+                    {
+                        h.TurnOn();
+                       
+
+                    }
                     SaveEvent(avgtemp, true);
                     return true;
                 }
+                
             }
             else
             {
@@ -131,12 +140,14 @@ namespace ERS_Projekat
             return true;
         }
 
-        public void SendHeaterIsOn()
+        public void SendHeaterIsOn(Heater h)
         {
-            foreach (Device d in devices)
-            {
-                d.Temperature = d.Temperature + 0.01;
-            };
+           
+                foreach (Device d in devices)
+                {
+                    d.Temperature = d.Temperature + 0.01;
+                };
+            
         }
         public bool SaveEvent(double avgTemp,bool on)
         {
@@ -150,6 +161,7 @@ namespace ERS_Projekat
                     {
                         writer.WriteLine("Device with id " + d.Id + " have temperature: " + d.CheckTemperature());
                     }
+                    writer.WriteLine("Day temp = " + dayTemperature);
                     writer.WriteLine("Avg Temperature is " + avgTemp);
                     if (on)
                     {
@@ -166,14 +178,7 @@ namespace ERS_Projekat
             return true;
         }
 
-        public bool TemperatureControl()
-        {
-            throw new NotImplementedException();
-        }
 
-        bool IRegulator.SendHeaterIsOn()
-        {
-            throw new NotImplementedException();
-        }
+
     }
 }

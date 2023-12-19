@@ -19,7 +19,6 @@ namespace ERS_Projekat
 
         bool RemoveDevice(Device d);
 
-        void UpdateDevices();
 
 
 

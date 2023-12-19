@@ -166,8 +166,14 @@ namespace ERS_Projekat
             return true;
         }
 
+        public bool TemperatureControl()
+        {
+            throw new NotImplementedException();
+        }
 
-
-
+        bool IRegulator.SendHeaterIsOn()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

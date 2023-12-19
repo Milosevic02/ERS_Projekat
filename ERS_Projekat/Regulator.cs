@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -97,7 +98,7 @@ namespace ERS_Projekat
                 i++;
             };
             avgtemp = avgtemp / i;
-            if (mode)
+            if (!mode)
             {
                 if(avgtemp > dayTemperature){
                     //smanjuj temperaturu
@@ -130,9 +131,32 @@ namespace ERS_Projekat
         {
             throw new NotImplementedException();
         }
-        public bool SaveEvent()
+        public bool SaveEvent(double avgTemp,bool on)
         {
-            throw new NotImplementedException();
+            try
+            {
+                using (StreamWriter writer = new StreamWriter("RegulatorDetail.txt", true))
+                {
+                    writer.WriteLine("**********Devices send information**********\n");
+
+                    foreach (Device d in devices)
+                    {
+                        writer.WriteLine("Device with id " + d.Id + " have temperature: " + d.CheckTemperature());
+                    }
+                    writer.WriteLine("Avg Temperature is " + avgTemp);
+                    if (on)
+                    {
+                        writer.WriteLine("Heater Turn On");
+                    }
+                    else { writer.WriteLine("Heater Turn Off"); }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error appending to the file: {ex.Message}");
+                return false;
+            }
+            return true;
         }
 
 

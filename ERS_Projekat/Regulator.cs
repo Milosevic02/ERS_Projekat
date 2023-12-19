@@ -102,11 +102,13 @@ namespace ERS_Projekat
             {
                 if(avgtemp > dayTemperature){
                     h.TurnOff();
+                    SaveEvent(avgtemp, false);
                     return true;
                     
                 }else if(avgtemp < dayTemperature)
                 {
                     h.TurnOn();
+                    SaveEvent(avgtemp, true);
                     return true;
                 }
             }
@@ -115,12 +117,14 @@ namespace ERS_Projekat
                 if (avgtemp > nightTemperature)
                 {
                     h.TurnOff() ;
+                    SaveEvent(avgtemp, false);
                     return true;
 
                 }
                 else if (avgtemp < nightTemperature)
                 {
                     h.TurnOn() ;
+                    SaveEvent(avgtemp, true);
                     return true;
                 }
             }

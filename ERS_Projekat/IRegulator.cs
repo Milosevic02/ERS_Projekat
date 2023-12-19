@@ -13,7 +13,7 @@ namespace ERS_Projekat
 
         bool SendHeaterIsOn(); ///Informacija da je pec pocela sa radom
 
-        bool SaveEvent(); // Cuvanje svih dogadjaja u txt fajl
+        bool SaveEvent(double avgTemp,bool on); // Cuvanje svih dogadjaja u txt fajl
 
         bool AddDevice(Device d);
 

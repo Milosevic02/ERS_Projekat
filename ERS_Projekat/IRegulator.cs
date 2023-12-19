@@ -9,9 +9,9 @@ namespace ERS_Projekat
     internal interface IRegulator
     {
         bool Settings(); ///UI za podesavanje
-        bool TemperatureControl(); ///Promena temperature u centralnoj peci
+        bool TemperatureControl(Heater h); ///Promena temperature u centralnoj peci
 
-        bool SendHeaterIsOn(); ///Informacija da je pec pocela sa radom
+        void SendHeaterIsOn(Heater h); ///Informacija da je pec pocela sa radom
 
         bool SaveEvent(double avgTemp,bool on); // Cuvanje svih dogadjaja u txt fajl
 

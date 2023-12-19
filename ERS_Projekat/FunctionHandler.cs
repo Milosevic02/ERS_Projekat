@@ -14,8 +14,8 @@ namespace ERS_Projekat
         static int devId = 0;
         static int devNum = 4;
 
-        static int checkTime = 3 * 60;
-        static int tempChangeTime = 2 * 60;
+        static int checkTime = 5 /** 60*/;
+        static int tempChangeTime = 2 /** 60*/;
 
         Heater heater = null;
         Regulator regulator = null;
@@ -101,7 +101,8 @@ namespace ERS_Projekat
 
         public void Regulate()
         {
-            int i = 0;
+            int checkCounter = 0;
+            int onCounter = 0; //counter starts when heater turns on 
             while (true)
             {
                 
@@ -111,25 +112,29 @@ namespace ERS_Projekat
 
                     if ((key.Modifiers & ConsoleModifiers.Control) != 0 && key.Key == ConsoleKey.C)
                     {
-                        Console.WriteLine("Interrupted!");
+                        Console.WriteLine("Prekod rada regulatora!");
                         break;
                     }
                 }
                 
-                Thread.Sleep(1000);
-                i++;
-                if (checkTime <= i)
+                
+                checkCounter++;
+
+                if (checkTime == checkCounter)
                 {
                     regulator.TemperatureControl(heater);
+                    checkCounter = 0;
                 }
-                if(tempChangeTime <= i)
+
+                if (heater.Flag) onCounter++;
+                else onCounter = 0;
+
+                if(tempChangeTime == onCounter)
                 {
                     regulator.SendHeaterIsOn();
+                    onCounter = 0;
                 }
-                if (checkTime > tempChangeTime && i >= checkTime)
-                    i = 0;
-                else if (checkTime < tempChangeTime && i >= checkTime)
-                    i = 0;
+                Thread.Sleep(1000);
             }
             
         }

@@ -1,0 +1,176 @@
+**********Devices send information**********
+
+Device with id 1 have temperature: 0
+Device with id 2 have temperature: 0
+Device with id 3 have temperature: 0
+Device with id 4 have temperature: 0
+Avg Temperature is 0
+Heater Turn On
+**********Devices send information**********
+
+Device with id 1 have temperature: 0.01
+Device with id 2 have temperature: 0.01
+Device with id 3 have temperature: 0.01
+Device with id 4 have temperature: 0.01
+Avg Temperature is 0.01
+Heater Turn On
+**********Devices send information**********
+
+Device with id 1 have temperature: 0.03
+Device with id 2 have temperature: 0.03
+Device with id 3 have temperature: 0.03
+Device with id 4 have temperature: 0.03
+Avg Temperature is 0.03
+Heater Turn On
+**********Devices send information**********
+
+Device with id 1 have temperature: 0.04
+Device with id 2 have temperature: 0.04
+Device with id 3 have temperature: 0.04
+Device with id 4 have temperature: 0.04
+Avg Temperature is 0.04
+Heater Turn On
+**********Devices send information**********
+
+Device with id 1 have temperature: 0.06
+Device with id 2 have temperature: 0.06
+Device with id 3 have temperature: 0.06
+Device with id 4 have temperature: 0.06
+Avg Temperature is 0.06
+Heater Turn On
+**********Devices send information**********
+
+Device with id 1 have temperature: 0.07
+Device with id 2 have temperature: 0.07
+Device with id 3 have temperature: 0.07
+Device with id 4 have temperature: 0.07
+Avg Temperature is 0.07
+Heater Turn On
+**********Devices send information**********
+
+Device with id 1 have temperature: 0.09
+Device with id 2 have temperature: 0.09
+Device with id 3 have temperature: 0.09
+Device with id 4 have temperature: 0.09
+Avg Temperature is 0.09
+Heater Turn On
+**********Devices send information**********
+
+Device with id 1 have temperature: 0.1
+Device with id 2 have temperature: 0.1
+Device with id 3 have temperature: 0.1
+Device with id 4 have temperature: 0.1
+Avg Temperature is 0.1
+Heater Turn On
+**********Devices send information**********
+
+Device with id 1 have temperature: 0
+Device with id 2 have temperature: 0
+Device with id 3 have temperature: 0
+Device with id 4 have temperature: 0
+Avg Temperature is 0
+Heater Turn On
+**********Devices send information**********
+
+Device with id 1 have temperature: 0.02
+Device with id 2 have temperature: 0.02
+Device with id 3 have temperature: 0.02
+Device with id 4 have temperature: 0.02
+Avg Temperature is 0.02
+Heater Turn On
+**********Devices send information**********
+
+Device with id 1 have temperature: 0.05
+Device with id 2 have temperature: 0.05
+Device with id 3 have temperature: 0.05
+Device with id 4 have temperature: 0.05
+Avg Temperature is 0.05
+Heater Turn On
+**********Devices send information**********
+
+Device with id 1 have temperature: 0.07
+Device with id 2 have temperature: 0.07
+Device with id 3 have temperature: 0.07
+Device with id 4 have temperature: 0.07
+Avg Temperature is 0.07
+Heater Turn On
+**********Devices send information**********
+
+Device with id 1 have temperature: 0.1
+Device with id 2 have temperature: 0.1
+Device with id 3 have temperature: 0.1
+Device with id 4 have temperature: 0.1
+Avg Temperature is 0.1
+Heater Turn On
+**********Devices send information**********
+
+Device with id 1 have temperature: 0.12
+Device with id 2 have temperature: 0.12
+Device with id 3 have temperature: 0.12
+Device with id 4 have temperature: 0.12
+Avg Temperature is 0.12
+Heater Turn On
+**********Devices send information**********
+
+Device with id 1 have temperature: 0.15
+Device with id 2 have temperature: 0.15
+Device with id 3 have temperature: 0.15
+Device with id 4 have temperature: 0.15
+Avg Temperature is 0.15
+Heater Turn On
+**********Devices send information**********
+
+Device with id 1 have temperature: 0.17
+Device with id 2 have temperature: 0.17
+Device with id 3 have temperature: 0.17
+Device with id 4 have temperature: 0.17
+Avg Temperature is 0.17
+Heater Turn On
+**********Devices send information**********
+
+Device with id 1 have temperature: 0.2
+Device with id 2 have temperature: 0.2
+Device with id 3 have temperature: 0.2
+Device with id 4 have temperature: 0.2
+Avg Temperature is 0.2
+Heater Turn On
+**********Devices send information**********
+
+Device with id 1 have temperature: 0.22
+Device with id 2 have temperature: 0.22
+Device with id 3 have temperature: 0.22
+Device with id 4 have temperature: 0.22
+Avg Temperature is 0.22
+Heater Turn On
+**********Devices send information**********
+
+Device with id 1 have temperature: 0.25
+Device with id 2 have temperature: 0.25
+Device with id 3 have temperature: 0.25
+Device with id 4 have temperature: 0.25
+Avg Temperature is 0.25
+Heater Turn On
+**********Devices send information**********
+
+Device with id 1 have temperature: 0.27
+Device with id 2 have temperature: 0.27
+Device with id 3 have temperature: 0.27
+Device with id 4 have temperature: 0.27
+Avg Temperature is 0.27
+Heater Turn On
+**********Devices send information**********
+
+Device with id 1 have temperature: 0.3
+Device with id 2 have temperature: 0.3
+Device with id 3 have temperature: 0.3
+Device with id 4 have temperature: 0.3
+Avg Temperature is 0.3
+Heater Turn On
+**********Devices send information**********
+
+Device with id 1 have temperature: 0.32
+Device with id 2 have temperature: 0.32
+Device with id 3 have temperature: 0.32
+Device with id 4 have temperature: 0.32
+Avg Temperature is 0.32
+Heater Turn On

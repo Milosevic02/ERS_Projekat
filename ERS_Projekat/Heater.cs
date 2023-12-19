@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,6 +11,7 @@ namespace ERS_Projekat
     internal class Heater : IHeater
     {
 
+        bool flag;
         DateTime startTime;
         TimeSpan elapsedTime;
         double fuelUsed;
@@ -20,9 +22,11 @@ namespace ERS_Projekat
         public Heater(double fuelConstant)
         {
             this.fuelConstant = fuelConstant;
+            flag = false;
         }
 
         public double FuelConstant { get => fuelConstant; set => fuelConstant = value; }
+        public bool Flag { get => flag; set => flag = value; }
 
         public string GetHeaterDetails()
         {
@@ -35,6 +39,7 @@ namespace ERS_Projekat
             fuelUsed = fuelConstant*elapsedTime.TotalSeconds;
             Console.WriteLine(fuelUsed);
             WriteToFile(logFilePath);
+            Flag = false;
             return true;
         }
 
@@ -42,6 +47,7 @@ namespace ERS_Projekat
         {
             startTime = DateTime.Now;
             fuelUsed = 0;
+            Flag = true;
             return true;
         }
 

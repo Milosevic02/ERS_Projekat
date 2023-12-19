@@ -8,21 +8,21 @@ namespace ERS_Projekat
 {
     internal class Device : IDevice
     {
-        readonly int id;
+        int id;
+        double temperature;
 
         public Device(int id)
         {
-            this.id = id;
+            this.Id = id;
         }
 
-        public int CheckTemperature()
+        public int Id { get => id; set => id = value; }
+        public double Temperature { get => temperature; set => temperature = value; }
+
+        public double CheckTemperature()
         {
-            throw new NotImplementedException();
+            return Temperature;
         }
 
-        public int SendTemperature()
-        {
-            throw new NotImplementedException();
-        }
     }
 }

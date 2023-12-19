@@ -8,10 +8,19 @@ namespace ERS_Projekat
 {
     internal class Program
     {
+        
+        
         static void Main(string[] args)
-        {          
-            Console.WriteLine("Press any key to continue...");
-            Console.ReadKey();
+        {
+            UIHandler ui_handler = new UIHandler();
+
+            while (true)
+            {
+                ui_handler.Menu();
+                ui_handler.GetCommand();
+            }
+            
+
         }
     }
 }

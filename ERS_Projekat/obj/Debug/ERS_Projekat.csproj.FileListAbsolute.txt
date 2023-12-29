@@ -13,3 +13,9 @@ C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\
 C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\obj\Debug\ERS_Projekat.csproj.CoreCompileInputs.cache
 C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\obj\Debug\ERS_Projekat.exe
 C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\obj\Debug\ERS_Projekat.pdb
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\nunit.framework.dll
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\nunit.framework.legacy.dll
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\nunit.framework.xml
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\nunit.framework.legacy.xml
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\obj\Debug\ERS_Projekat.csproj.CopyComplete

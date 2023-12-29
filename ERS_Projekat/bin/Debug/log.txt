@@ -1,10 +1,2 @@
-Start time: [19-Dec-23 18:36:35]; On-time: [00:00:20.1450528]; Fuel used: 20.1450528
-
-Start time: [19-Dec-23 18:40:13]; On-time: [00:00:20.1654983]; Fuel used: 20.1654983
-
-Start time: [19-Dec-23 18:48:14]; On-time: [00:00:20.1651237]; Fuel used: 20.1651237
-
-Start time: [19-Dec-23 18:54:31]; On-time: [00:00:34.3083590]; Fuel used: 34.308359
-
-Start time: [19-Dec-23 19:00:05]; On-time: [00:00:24.8969019]; Fuel used: 24.8969019
+Start time: [12/29/2023 5:50:27 PM]; On-time: [00:00:04.1169987]; Fuel used: 4.1169987
 

@@ -20,6 +20,7 @@ namespace ERS_Projekat
         Heater heater = null;
         Regulator regulator = null;
 
+
         public FunctionHandler()
         {
             InitializeHeater();
@@ -28,8 +29,10 @@ namespace ERS_Projekat
         }
 
         readonly string logFilePath = "log.txt";
+        readonly string deviceLogFilePath = "RegulatorDetail.txt";
 
         internal Heater Heater { get => heater; set => heater = value; }
+        public bool stopRequested { get; private set; } = false;
 
         public bool ChangeFuel(Heater h, double newConstant)
         {
@@ -48,6 +51,17 @@ namespace ERS_Projekat
                 Console.WriteLine($"Error clearing log file: {ex.Message}");
                 return false;
             }
+
+            try
+            {
+                File.WriteAllText(deviceLogFilePath, string.Empty);
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine($"Error clearing log file: {ex.Message}");
+                return false;
+            }
+
             return true;
         }
 
@@ -103,45 +117,43 @@ namespace ERS_Projekat
         {
             int checkCounter = 0;
             int onCounter = 0; // counter starts when heater turns on
-
-            while (true)
-            {
-                if (Console.KeyAvailable)
+           
+                while (!stopRequested)
                 {
-                    ConsoleKeyInfo key = Console.ReadKey(intercept: true);
+                    
+                    checkCounter++;
 
-                    if ((key.Modifiers & ConsoleModifiers.Control) != 0 && key.Key == ConsoleKey.C)
+                    if (checkTime == checkCounter)
                     {
-                        Console.WriteLine("Prekod rada regulatora!");
-                        break;
+                        regulator.TemperatureControl(heater);
+                        checkCounter = 0;
                     }
-                }
 
-                checkCounter++;
-
-                if (checkTime == checkCounter)
-                {
-                    regulator.TemperatureControl(heater);
-                    checkCounter = 0;
-                }
-
-                if (heater.Flag)
-                {
-                    onCounter++;
-                    if (tempChangeTime == onCounter)
+                    if (heater.Flag)
                     {
-                        regulator.SendHeaterIsOn(heater);
-                        onCounter = 0; // Reset the onCounter only after sending the signal
+                        onCounter++;
+                        if (tempChangeTime == onCounter)
+                        {
+                            regulator.SendHeaterIsOn(heater);
+                            onCounter = 0; // Reset the onCounter only after sending the signal
+                        }
                     }
-                }
-                else
-                {
-                    onCounter = 0; // Reset the onCounter if the heater is off
-                }
+                    else
+                    {
+                        onCounter = 0; // Reset the onCounter if the heater is off
+                    }
 
-                Thread.Sleep(10);
-            }
+                    Thread.Sleep(1000);
+                }
+            stopRequested = false;
+          
+                
+        }
 
+        public void StopRegulation()
+        {
+            stopRequested = true;
+            heater.TurnOff();
         }
     }
 }

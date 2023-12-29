@@ -89,7 +89,7 @@ namespace ERS_Projekat
 
         public bool InitializeRegulator()
         {
-            regulator = new Regulator(false,0,0,0,0);
+            regulator = new Regulator(0,0,DateTime.Now,DateTime.Now);
             regulator.Settings();
             return true;
         }

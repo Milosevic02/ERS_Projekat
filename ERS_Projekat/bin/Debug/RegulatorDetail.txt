@@ -1,99 +1,18 @@
 **********Devices send information**********
 
-Device with id 1 have temperature: 0.08
-Device with id 2 have temperature: 0.08
-Device with id 3 have temperature: 0.08
-Device with id 4 have temperature: 0.08
-Day temp = 1
-Avg Temperature is 0.08
-Heater Turn On
-**********Devices send information**********
-
-Device with id 1 have temperature: 0.1
-Device with id 2 have temperature: 0.1
-Device with id 3 have temperature: 0.1
-Device with id 4 have temperature: 0.1
-Day temp = 1
-Avg Temperature is 0.1
-Heater Turn On
-**********Devices send information**********
-
-Device with id 1 have temperature: 0.13
-Device with id 2 have temperature: 0.13
-Device with id 3 have temperature: 0.13
-Device with id 4 have temperature: 0.13
-Day temp = 1
-Avg Temperature is 0.13
-Heater Turn On
-**********Devices send information**********
-
-Device with id 1 have temperature: 0.15
-Device with id 2 have temperature: 0.15
-Device with id 3 have temperature: 0.15
-Device with id 4 have temperature: 0.15
-Day temp = 1
-Avg Temperature is 0.15
-Heater Turn On
-**********Devices send information**********
-
-Device with id 1 have temperature: 0.18
-Device with id 2 have temperature: 0.18
-Device with id 3 have temperature: 0.18
-Device with id 4 have temperature: 0.18
-Day temp = 1
-Avg Temperature is 0.18
-Heater Turn On
-**********Devices send information**********
-
-Device with id 1 have temperature: 0.2
-Device with id 2 have temperature: 0.2
-Device with id 3 have temperature: 0.2
-Device with id 4 have temperature: 0.2
-Day temp = 1
-Avg Temperature is 0.2
-Heater Turn On
-**********Devices send information**********
-
-Device with id 1 have temperature: 0.23
-Device with id 2 have temperature: 0.23
-Device with id 3 have temperature: 0.23
-Device with id 4 have temperature: 0.23
-Day temp = 1
-Avg Temperature is 0.23
-Heater Turn On
-**********Devices send information**********
-
-Device with id 1 have temperature: 0.25
-Device with id 2 have temperature: 0.25
-Device with id 3 have temperature: 0.25
-Device with id 4 have temperature: 0.25
-Day temp = 1
-Avg Temperature is 0.25
-Heater Turn On
-**********Devices send information**********
-
-Device with id 1 have temperature: 0.28
-Device with id 2 have temperature: 0.28
-Device with id 3 have temperature: 0.28
-Device with id 4 have temperature: 0.28
-Day temp = 1
-Avg Temperature is 0.28
-Heater Turn On
-**********Devices send information**********
-
-Device with id 1 have temperature: 0.3
-Device with id 2 have temperature: 0.3
-Device with id 3 have temperature: 0.3
-Device with id 4 have temperature: 0.3
-Day temp = 1
-Avg Temperature is 0.3
-Heater Turn On
-**********Devices send information**********
-
-Device with id 1 have temperature: 0
-Device with id 2 have temperature: 0
-Device with id 3 have temperature: 0
-Device with id 4 have temperature: 0
-Day temp = 1
+Device with id 1 has temperature: 0
+Device with id 2 has temperature: 0
+Device with id 3 has temperature: 0
+Device with id 4 has temperature: 0
+Night temp = 23
 Avg Temperature is 0
-Heater Turn On
+Heater is turned On
+**********Devices send information**********
+
+Device with id 1 has temperature: 0.02
+Device with id 2 has temperature: 0.02
+Device with id 3 has temperature: 0.02
+Device with id 4 has temperature: 0.02
+Night temp = 23
+Avg Temperature is 0.02
+Heater is turned On

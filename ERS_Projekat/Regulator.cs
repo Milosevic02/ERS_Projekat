@@ -176,7 +176,7 @@ namespace ERS_Projekat
                         writer.WriteLine("Day temp = " + dayTemperature);
                     else
                         writer.WriteLine("Night temp = " + nightTemperature);
-                    writer.WriteLine("Avg Temperature is " + avgTemp);
+                    writer.WriteLine("Avg Temperature is " + Math.Round(avgTemp,3));
                     if (on)
                     {
                         writer.WriteLine("Heater is turned On");

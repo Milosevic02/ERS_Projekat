@@ -38,6 +38,7 @@ namespace ERS_Projekat
             elapsedTime = DateTime.Now - startTime;
             fuelUsed = fuelConstant*elapsedTime.TotalSeconds;
             WriteToFile(logFilePath);
+            fuelUsed = 0;
             Flag = false;
             return true;
         }

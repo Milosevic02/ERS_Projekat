@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ERS_Projekat
@@ -10,10 +11,13 @@ namespace ERS_Projekat
     {
         int id;
         double temperature;
+        readonly Random r = new Random();
 
         public Device(int id)
         {
             this.Id = id;
+            temperature = r.NextDouble() + r.Next(19,23);
+            Thread.Sleep(100); //for synchronizing rng seed 
         }
 
         public int Id { get => id; set => id = value; }
@@ -21,7 +25,7 @@ namespace ERS_Projekat
 
         public double CheckTemperature()
         {
-            return Temperature;
+            return Math.Round(Temperature,3);
         }
 
     }

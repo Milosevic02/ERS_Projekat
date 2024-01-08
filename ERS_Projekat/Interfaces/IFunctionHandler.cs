@@ -16,6 +16,8 @@ namespace ERS_Projekat
         bool OpenLog();
         bool ClearLogFile();
         bool ChangeFuel(Heater h, double newConst);
+
+        bool ChangeIntervals(int t1,int t2);
         void Regulate();
 
         void StopRegulation();

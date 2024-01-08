@@ -91,8 +91,11 @@ namespace ERS_Projekat
         public bool InitializeRegulator()
         {
             Regulator = new Regulator(0,0,DateTime.Now,DateTime.Now);
-            Regulator.Settings();
-            return true;
+            if (Regulator.Settings())
+                return true;
+            else
+            Regulator = new Regulator(0, 0, DateTime.Now, DateTime.Now);
+            return false;
         }
 
         public bool OpenLog()
@@ -118,6 +121,7 @@ namespace ERS_Projekat
         {
             int checkCounter = 0;
             int onCounter = 0; // counter starts when heater turns on
+            int offCounter = 0;
            
                 while (!stopRequested)
                 {
@@ -132,6 +136,7 @@ namespace ERS_Projekat
 
                     if (heater.Flag)
                     {
+                        offCounter = 0;
                         onCounter++;
                         if (tempChangeTime == onCounter)
                         {
@@ -142,6 +147,12 @@ namespace ERS_Projekat
                     else
                     {
                         onCounter = 0; // Reset the onCounter if the heater is off
+                        offCounter++;
+                        if (tempChangeTime == offCounter)
+                        {
+                            Regulator.SendHeaterIsOff(heater);
+                            offCounter = 0; // Reset the onCounter only after sending the signal
+                        }
                     }
 
                     Thread.Sleep(1000);
@@ -155,6 +166,13 @@ namespace ERS_Projekat
         {
             stopRequested = true;
             heater.TurnOff();
+        }
+
+        public bool ChangeIntervals(int ct,int tct)
+        {
+            checkTime = ct;
+            tempChangeTime = tct;
+            return true;
         }
     }
 }

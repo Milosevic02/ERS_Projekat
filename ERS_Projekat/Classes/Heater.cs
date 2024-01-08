@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ERS_Projekat
 {
-    internal class Heater : IHeater
+    public class Heater : IHeater
     {
 
         bool flag;
@@ -27,6 +27,8 @@ namespace ERS_Projekat
 
         public double FuelConstant { get => fuelConstant; set => fuelConstant = value; }
         public bool Flag { get => flag; set => flag = value; }
+        public double FuelUsed { get; internal set; }
+        public TimeSpan ElapsedTime { get; internal set; }
 
         public string GetHeaterDetails()
         {

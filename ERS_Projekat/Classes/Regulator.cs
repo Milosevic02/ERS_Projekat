@@ -9,52 +9,30 @@ namespace ERS_Projekat
 {
     internal class Regulator : IRegulator
     {
-        //bool mode; //0 - day ; 1 - night
 
         double dayTemperature;
         double nightTemperature;
-
-        //double dayStart, dayEnd;
-
         DateTime dayStart;
         DateTime dayEnd;
         List<Device> devices = new List<Device>();
 
-
-        public Regulator(/*bool mode,*/ double dayTemperature, double nightTemperature, DateTime dayStart, DateTime dayEnd)
+        public Regulator(double dayTemperature, double nightTemperature, DateTime dayStart, DateTime dayEnd)
         {
-            //this.mode = mode;
             this.dayTemperature = dayTemperature;
             this.nightTemperature = nightTemperature;
             this.DayStart = dayStart;
             this.DayEnd = dayEnd;
         }
 
-        //public bool Mode { get => mode; set => mode = value; }
         public double DayTemperature { get => dayTemperature; set => dayTemperature = value; }
         public double NightTemperature { get => nightTemperature; set => nightTemperature = value; }
-        //public double DayStart { get => DayStart1; set => DayStart1 = value; }
-        //public double DayEnd { get => DayEnd1; set => DayEnd1 = value; }
         public DateTime DayEnd { get => dayEnd; set => dayEnd = value; }
         public DateTime DayStart { get => dayStart; set => dayStart = value; }
+        internal List<Device> Devices { get => devices; set => devices = value; }
 
         public bool Settings()
         {
-            //Console.WriteLine("Izaberi trenutan rezim rada (0 - dnevni rezim 1 - nocni rezim)");
-            //int pom = int.Parse(Console.ReadLine());
-            //if (pom == 1)
-            //{
-            //    mode = true;
-            //}
-            //else if (pom == 0)
-            //{
-            //    mode = false;
-            //}
-            //else
-            //{
-            //    return false;
-            //}
-            Console.WriteLine("Unesi od kada ti zapocinje dan (format - hh:mm):");
+             Console.WriteLine("Unesi od kada ti zapocinje dan (format - hh:mm):");
             DayStart = DateTime.Parse(Console.ReadLine());
             Console.WriteLine("Unesi do kada ti traje dan (format - hh:mm):");
             DayEnd = DateTime.Parse(Console.ReadLine());
@@ -67,25 +45,25 @@ namespace ERS_Projekat
 
         public bool AddDevice(Device d)
         {
-            foreach(Device device in devices)
+            foreach(Device device in Devices)
             {
                 if(device.Id == d.Id)
                 {
                     return false;
                 }
             }
-            devices.Add(d);
+            Devices.Add(d);
             return true;
         }
 
 
         public bool RemoveDevice(Device d)
         {
-            foreach (Device device in devices)
+            foreach (Device device in Devices)
             {
                 if (device.Id == d.Id)
                 {
-                    devices.Remove(d);
+                    Devices.Remove(d);
                     return true;
                 }
             }
@@ -98,7 +76,7 @@ namespace ERS_Projekat
             double avgtemp = 0;
             int i = 0;
 
-            foreach (Device d in devices)
+            foreach (Device d in Devices)
             {
                 avgtemp += d.CheckTemperature();
                 i++;
@@ -153,7 +131,7 @@ namespace ERS_Projekat
         public void SendHeaterIsOn(Heater h)
         {
            
-                foreach (Device d in devices)
+                foreach (Device d in Devices)
                 {
                     d.Temperature = d.Temperature + 0.01;
                 };
@@ -167,7 +145,7 @@ namespace ERS_Projekat
                 {
                     writer.WriteLine("**********Devices send information**********\n");
 
-                    foreach (Device d in devices)
+                    foreach (Device d in Devices)
                     {
                         writer.WriteLine("Device with id " + d.Id + " has temperature: " + d.CheckTemperature());
                     }

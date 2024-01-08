@@ -14,8 +14,8 @@ namespace ERS_Projekat
         static int devId = 0;
         static int devNum = 4;
 
-        static int checkTime = 5 /** 60*/;
-        static int tempChangeTime = 2 /** 60*/;
+        static int checkTime = 5 * 60;
+        static int tempChangeTime = 2 * 60;
 
         Heater heater = null;
         Regulator regulator = null;
@@ -33,6 +33,7 @@ namespace ERS_Projekat
 
         internal Heater Heater { get => heater; set => heater = value; }
         public bool stopRequested { get; private set; } = false;
+        internal Regulator Regulator { get => regulator; set => regulator = value; }
 
         public bool ChangeFuel(Heater h, double newConstant)
         {
@@ -70,7 +71,7 @@ namespace ERS_Projekat
             for(int i = 0; i < devNum; i++)
             {
                 Device d = InitializeDevice();
-                regulator.AddDevice(d);
+                Regulator.AddDevice(d);
             }
             return true;
         }
@@ -89,8 +90,8 @@ namespace ERS_Projekat
 
         public bool InitializeRegulator()
         {
-            regulator = new Regulator(0,0,DateTime.Now,DateTime.Now);
-            regulator.Settings();
+            Regulator = new Regulator(0,0,DateTime.Now,DateTime.Now);
+            Regulator.Settings();
             return true;
         }
 
@@ -110,7 +111,7 @@ namespace ERS_Projekat
 
         public bool SelectTime()
         {
-            return regulator.Settings();
+            return Regulator.Settings();
         }
 
         public void Regulate()
@@ -125,7 +126,7 @@ namespace ERS_Projekat
 
                     if (checkTime == checkCounter)
                     {
-                        regulator.TemperatureControl(heater);
+                        Regulator.TemperatureControl(heater);
                         checkCounter = 0;
                     }
 
@@ -134,7 +135,7 @@ namespace ERS_Projekat
                         onCounter++;
                         if (tempChangeTime == onCounter)
                         {
-                            regulator.SendHeaterIsOn(heater);
+                            Regulator.SendHeaterIsOn(heater);
                             onCounter = 0; // Reset the onCounter only after sending the signal
                         }
                     }

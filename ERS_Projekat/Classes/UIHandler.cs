@@ -12,7 +12,7 @@ namespace ERS_Projekat
     {
         readonly int commandNum = 5;
         bool commandEnd = false;
-        readonly FunctionHandler functionHandler = new FunctionHandler();
+        public FunctionHandler functionHandler = new FunctionHandler();
 
         Thread thrRegulator;
 
@@ -34,6 +34,7 @@ namespace ERS_Projekat
 
         public void GetCommand()
         {
+
             do
             {
 
@@ -113,6 +114,8 @@ namespace ERS_Projekat
                 catch (Exception)
                 {
                     Console.WriteLine("Nepoznata komanda, probajte opet");
+
+
                 }
             } while (commandEnd != true);
         }

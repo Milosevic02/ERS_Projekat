@@ -19,3 +19,16 @@ C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\System.Threadin
 C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\nunit.framework.xml
 C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\nunit.framework.legacy.xml
 C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\obj\Debug\ERS_Projekat.csproj.CopyComplete
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\Castle.Core.dll
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\Moq.dll
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\Castle.Core.xml
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\Moq.xml
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\NUnit3.TestAdapter.dll
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\NUnit3.TestAdapter.pdb
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\nunit.engine.dll
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\nunit.engine.api.dll
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\nunit.engine.core.dll
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\testcentric.engine.metadata.dll

@@ -87,6 +87,10 @@
   <ItemGroup>
     <None Include="Common\App.config" />
     <None Include="Common\packages.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Analyzer Include="packages\NUnit.Analyzers.3.10.0\analyzers\dotnet\cs\nunit.analyzers.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

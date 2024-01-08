@@ -10,7 +10,7 @@ namespace ERS_Projekat
 {
     internal class UIHandler : IUIHandler
     {
-        readonly int commandNum = 5;
+        readonly int commandNum = 6;
         bool commandEnd = false;
         public FunctionHandler functionHandler = new FunctionHandler();
 
@@ -30,6 +30,7 @@ namespace ERS_Projekat
             Console.WriteLine("3. Pokretanje/gašenje regulatora");
             Console.WriteLine("4. Brisanje log fajlova");
             Console.WriteLine("5. Otvori log fajl");
+            Console.WriteLine("6. Promena intervala merenja i proveravanja uređaja");
         }
 
         public void GetCommand()
@@ -102,7 +103,32 @@ namespace ERS_Projekat
                             commandEnd = true;
                             break;
                         case 6:
-                            Console.WriteLine("You selected Case 6");
+                            int a = 0, b = 0;
+                            bool c6Success = false;
+                            do
+                            {
+                                Console.WriteLine("Unesite novi interval za proveru temperature (u sekundama):");
+                                try
+                                {
+                                    a = int.Parse(Console.ReadLine());
+                                    c6Success = true;
+                                }
+                                catch (FormatException)
+                                {
+                                    Console.WriteLine("Konstanta nije validna! Pokusajte opet");
+                                }
+                                Console.WriteLine("Unesite novi interval za rad sa uređajima (u sekundama):");
+                                try
+                                {
+                                    b = int.Parse(Console.ReadLine());
+                                    c6Success = true;
+                                }
+                                catch (FormatException)
+                                {
+                                    Console.WriteLine("Konstanta nije validna! Pokusajte opet");
+                                }
+                            } while (c6Success != true);
+                            functionHandler.ChangeIntervals(a, b);
                             commandEnd = true;
                             break;
 

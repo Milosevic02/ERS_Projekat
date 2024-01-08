@@ -32,22 +32,31 @@ namespace ERS_Projekat
 
         public bool Settings()
         {
-             Console.WriteLine("Unesi od kada ti zapocinje dan (format - hh:mm):");
-            DayStart = DateTime.Parse(Console.ReadLine());
-            Console.WriteLine("Unesi do kada ti traje dan (format - hh:mm):");
-            DayEnd = DateTime.Parse(Console.ReadLine());
-            Console.WriteLine("Unesi koju temperaturu zelis preko dana:");
-            dayTemperature = Double.Parse(Console.ReadLine());
-            Console.WriteLine("Unesi koju temperaturu zelis preko noci:");
-            nightTemperature = Double.Parse(Console.ReadLine());
+            try
+            {
+                Console.WriteLine("Unesi od kada ti zapocinje dan (format - hh:mm):");
+                DayStart = DateTime.Parse(Console.ReadLine());
+                Console.WriteLine("Unesi do kada ti traje dan (format - hh:mm):");
+                DayEnd = DateTime.Parse(Console.ReadLine());
+                Console.WriteLine("Unesi koju temperaturu zelis preko dana:");
+                dayTemperature = Double.Parse(Console.ReadLine());
+                Console.WriteLine("Unesi koju temperaturu zelis preko noci:");
+                nightTemperature = Double.Parse(Console.ReadLine());
+            }
+            catch (FormatException e)
+            {
+                Console.WriteLine("Error while parsing: {0}",e.Message);
+                return false;
+            }
+            
             return true;
         }
 
         public bool AddDevice(Device d)
         {
-            foreach(Device device in Devices)
+            foreach (Device device in Devices)
             {
-                if(device.Id == d.Id)
+                if (device.Id == d.Id)
                 {
                     return false;
                 }
@@ -128,16 +137,9 @@ namespace ERS_Projekat
             return true;
         }
 
-        public void SendHeaterIsOn(Heater h)
-        {
-           
-                foreach (Device d in Devices)
-                {
-                    d.Temperature = d.Temperature + 0.01;
-                };
-            
-        }
-        public bool SaveEvent(double avgTemp,bool on)
+
+
+        public bool SaveEvent(double avgTemp, bool on)
         {
             try
             {
@@ -154,7 +156,7 @@ namespace ERS_Projekat
                         writer.WriteLine("Day temp = " + dayTemperature);
                     else
                         writer.WriteLine("Night temp = " + nightTemperature);
-                    writer.WriteLine("Avg Temperature is " + Math.Round(avgTemp,3));
+                    writer.WriteLine("Avg Temperature is " + Math.Round(avgTemp, 3));
                     if (on)
                     {
                         writer.WriteLine("Heater is turned On");
@@ -171,6 +173,22 @@ namespace ERS_Projekat
         }
 
 
+        public void SendHeaterIsOn(Heater h)
+        {
 
+            foreach (Device d in Devices)
+            {
+                d.Temperature = d.Temperature + 0.01;
+            }
+
+        }
+
+        public void SendHeaterIsOff(Heater h)
+        {
+            foreach (Device d in Devices)
+            {
+                d.Temperature = d.Temperature - 0.01;
+            }
+        }
     }
 }

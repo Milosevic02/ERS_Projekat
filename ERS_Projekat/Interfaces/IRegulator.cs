@@ -13,6 +13,8 @@ namespace ERS_Projekat
 
         void SendHeaterIsOn(Heater h); ///Informacija da je pec pocela sa radom
 
+        void SendHeaterIsOff(Heater h); ///Informacija da je pec prestala sa radom
+
         bool SaveEvent(double avgTemp,bool on); // Cuvanje svih dogadjaja u txt fajl
 
         bool AddDevice(Device d);

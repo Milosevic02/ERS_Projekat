@@ -23,6 +23,8 @@ namespace ERS_Projekat
         {
             this.fuelConstant = fuelConstant;
             flag = false;
+            startTime = DateTime.Now;
+            elapsedTime = DateTime.Now-startTime;
         }
 
         public double FuelConstant { get => fuelConstant; set => fuelConstant = value; }

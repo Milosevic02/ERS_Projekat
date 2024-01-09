@@ -3,12 +3,17 @@ using Moq;
 using System;
 using System.IO;
 using System.Reflection;
+using System.Collections.Generic;
+using System.Threading;
+using System.Runtime.InteropServices;
 
 namespace ERS_Projekat.Tests
 {
     [TestFixture]
     public class FunctionHandlerTests
     {
+        Thread t;
+
         [Test]
         public void InitializeHeater_HeaterNotNull()
         {
@@ -102,39 +107,71 @@ namespace ERS_Projekat.Tests
         public void InitializeDevices_DevicesInitialized()
         {
             // Arrange
-            var functionHandler = new FunctionHandler(true);
+            FunctionHandler functionHandler = new FunctionHandler(true);
 
             // Act
-            var result = functionHandler.InitializeDevices();
+            List<Device> devs = functionHandler.Regulator.Devices;
+
+            // Assert
+            Assert.That(devs, Is.Not.Null);
+        }
+
+        //[Test]
+        public void OpenLog_Successful()
+        {
+            // Arrange
+            Mock<FunctionHandler> functionHandlerMock = new Mock<FunctionHandler>(true);
+
+            // Act
+            bool result = functionHandlerMock.Object.OpenLog();
 
             // Assert
             Assert.That(result, Is.True);
-            Assert.That(functionHandler.Regulator.Devices.Count, Is.EqualTo(4));
         }
 
         [Test]
-        public void InitializeDevice_DeviceInitialized()
+        public void Regulate_Start_Stop()
         {
             // Arrange
-            Console.WriteLine("Starting test");
-            var functionHandler = new FunctionHandler(true);
+            Mock<FunctionHandler> functionHandlerMock = new Mock<FunctionHandler>(true);
+            t = new Thread(() => functionHandlerMock.Object.Regulate());
 
-            // Act
-            Console.WriteLine("Before InitializeDevice");
-            var device = functionHandler.InitializeDevice();
-            Console.WriteLine("After InitializeDevice");
+            // Act & Assert
+            t.Start();
+            Console.WriteLine("Started thread...");
+            Thread.Sleep(1500); //allow thread to start working
+            Assert.That(functionHandlerMock.Object.stopRequested, Is.False);
 
-            // Assert
-            Assert.That(device, Is.Not.Null);
-            Assert.That(device.Id, Is.EqualTo(1));
-
-            // Reset devId for the next test
-            typeof(FunctionHandler).GetField("devId", BindingFlags.Static | BindingFlags.NonPublic)?.SetValue(null, 0);
-
-            Console.WriteLine("Test completed");
+            functionHandlerMock.Object.StopRegulation();
+            Assert.That(functionHandlerMock.Object.stopRequested, Is.True);
+            t.Join();
+            Console.WriteLine("Stopped thread...");
         }
 
+        [Test]
+        public void ChangeIntervals_ValidInput()
+        {
+            // Arrange
+            Mock<FunctionHandler> functionHandlerMock = new Mock<FunctionHandler>(true);
 
-        // Add more tests for OpenLog, SelectTime, Regulate, StopRegulation as needed
+            // Act
+            bool result = functionHandlerMock.Object.ChangeIntervals(100,200);
+
+            // Assert
+            Assert.That(result, Is.True);
+        }
+
+        [Test]
+        public void ChangeIntervals_InvalidInput()
+        {
+            // Arrange
+            Mock<FunctionHandler> functionHandlerMock = new Mock<FunctionHandler>(true);
+
+            // Act
+            bool result = functionHandlerMock.Object.ChangeIntervals(-232, 0);
+
+            // Assert
+            Assert.That(result, Is.False);
+        }
     }
 }

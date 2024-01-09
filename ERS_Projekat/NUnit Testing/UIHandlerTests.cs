@@ -6,6 +6,16 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ERS_Projekat.Tests
 {
+    
+    
+    
+    /* DISCLAIMER!!!
+     * 
+     * These tests are not yet 'tested' beacuse of an invisible infinite loop or an unintentional process halt
+     * Be advised when trying to fix these tests, and good luck.
+     * 
+    */
+    
     [TestFixture]
     public class UIHandlerTests
     {
@@ -15,7 +25,7 @@ namespace ERS_Projekat.Tests
         [SetUp]
         public void Setup()
         {
-            functionHandlerMock = new Mock<FunctionHandler>();
+            functionHandlerMock = new Mock<FunctionHandler>(true);
             uiHandler = new UIHandler();
             uiHandler.functionHandler = functionHandlerMock.Object;
         }
@@ -26,7 +36,7 @@ namespace ERS_Projekat.Tests
         {
             // Arrange
             var mockReader = new Mock<TextReader>();
-            var userInput = "invalid";
+            var userInput = "invalid\n";
             mockReader.SetupSequence(r => r.ReadLine()).Returns(userInput);
             Console.SetIn(mockReader.Object);
 
@@ -55,9 +65,10 @@ namespace ERS_Projekat.Tests
 
 
         [TearDown]
-        public void RestoreConsoleInput()
+        public void TearDown()
         {
-            Console.SetIn(new StreamReader(Console.OpenStandardInput()));
+            uiHandler = null;
+            functionHandlerMock = null;
         }
     }
 }

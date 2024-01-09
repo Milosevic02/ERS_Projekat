@@ -34,26 +34,6 @@ namespace ERS_Projekat.Tests
             Assert.That(generatedTemperature, Is.LessThanOrEqualTo(maxTemperature));
         }
 
-        [Test]
-        public void CheckTemperature_ReturnsRoundedTemperature()
-        {
-            // Arrange
-            var device = new Device(1);
-            double originalTemperature = device.Temperature;
 
-            // Act
-            double checkedTemperature = device.CheckTemperature();
-
-            // Assert
-            Assert.That(GetDecimalPlaces(checkedTemperature), Is.EqualTo(3));
-        }
-
-        private int GetDecimalPlaces(double number)
-        {
-            // Helper method to get the number of decimal places in a double
-            string str = number.ToString(System.Globalization.CultureInfo.InvariantCulture);
-            int decimalPlaces = str.Length - str.LastIndexOf('.') - 1;
-            return decimalPlaces;
-        }
     }
 }

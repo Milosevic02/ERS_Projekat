@@ -12,14 +12,14 @@ namespace ERS_Projekat
     internal class Program
     {
         private static Thread t = new Thread(() => Loop());
-        private static UIHandler ui_handler = new UIHandler();
+        private static UIHandler ui_handler = new UIHandler(false);
 
         static void Main()
         {
             t.Start();
             Console.CancelKeyPress += (sender, eventArgs) =>
             {
-                Console.WriteLine("Exiting...Please wait a bit for all threads to terminate.");
+                Console.WriteLine("\nExiting...Please wait a bit for all threads to terminate.");
                 t.Abort();
                 Environment.Exit(0);
             };

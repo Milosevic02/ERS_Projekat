@@ -12,12 +12,15 @@ namespace ERS_Projekat
     {
         readonly int commandNum = 6;
         bool commandEnd = false;
-        public FunctionHandler functionHandler = new FunctionHandler();
+        public FunctionHandler functionHandler;
 
         Thread thrRegulator;
 
-        public UIHandler() 
+        public bool CommandEnd { get => commandEnd; set => commandEnd = value; }
+
+        public UIHandler(bool testing) 
         {
+            functionHandler = new FunctionHandler(testing);
             thrRegulator = new Thread(new ThreadStart(functionHandler.Regulate));
         }
 
@@ -35,7 +38,7 @@ namespace ERS_Projekat
 
         public void GetCommand()
         {
-            commandEnd = false;
+            CommandEnd = false;
             do
             {
 
@@ -53,7 +56,7 @@ namespace ERS_Projekat
                     {
                         case 1:
                             functionHandler.SelectTime();
-                            commandEnd = true;
+                            CommandEnd = true;
                             break;
 
                         case 2:
@@ -74,7 +77,7 @@ namespace ERS_Projekat
 
                             }while (c2Success != true);
                             functionHandler.ChangeFuel(functionHandler.Heater,c);
-                            commandEnd = true;
+                            CommandEnd = true;
                             break;
 
                         case 3:
@@ -90,17 +93,17 @@ namespace ERS_Projekat
                                 thrRegulator.Join(); // Wait for the thread to finish
                                 Console.WriteLine("\nRegulator je prestao sa radom.\n");
                             }
-                            commandEnd = true;
+                            CommandEnd = true;
                             break;
 
                         case 4:
                             functionHandler.ClearLogFile();
                             Console.WriteLine("Cleared log file!");
-                            commandEnd = true;
+                            CommandEnd = true;
                             break;
                         case 5:
                             functionHandler.OpenLog();
-                            commandEnd = true;
+                            CommandEnd = true;
                             break;
                         case 6:
                             int a = 0, b = 0;
@@ -123,7 +126,7 @@ namespace ERS_Projekat
                               
                             } while (c6Success != true);
                             functionHandler.ChangeIntervals(a, b);
-                            commandEnd = true;
+                            CommandEnd = true;
                             break;
                     }
 
@@ -136,7 +139,7 @@ namespace ERS_Projekat
                 {
                     //Console.WriteLine("Nepoznata komanda, probajte opet");
                 }
-            } while (commandEnd != true);
+            } while (CommandEnd != true);
         }
     }
 }

@@ -1,0 +1,10 @@
+Start time: [9.1.2024. 19:26:23]; On-time: [00:00:01.5090048]; Fuel used: 0
+
+Start time: [9.1.2024. 19:26:26]; On-time: [00:00:00]; Fuel used: 0
+
+Start time: [9.1.2024. 19:26:26]; On-time: [00:00:00]; Fuel used: 0
+
+Start time: [9.1.2024. 19:26:26]; On-time: [00:00:00]; Fuel used: 0
+
+Start time: [9.1.2024. 19:26:26]; On-time: [00:00:00.1090003]; Fuel used: 0
+

@@ -1,0 +1,17 @@
+**********Devices send information**********
+
+Night temp = 20
+Avg Temperature is 22
+Heater is turned On
+**********Devices send information**********
+
+Device with id 1 has temperature: 25
+Night temp = 20
+Avg Temperature is 25
+Heater is turned Off
+**********Devices send information**********
+
+Device with id 1 has temperature: 15
+Night temp = 20
+Avg Temperature is 15
+Heater is turned On

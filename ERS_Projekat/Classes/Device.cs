@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ERS_Projekat
 {
-    internal class Device : IDevice
+    public class Device : IDevice
     {
         int id;
         double temperature;

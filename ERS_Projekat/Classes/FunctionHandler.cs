@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace ERS_Projekat
 {
-    internal class FunctionHandler : IFunctionHandler
+    public class FunctionHandler : IFunctionHandler
     {
         static int devId = 0;
         static int devNum = 4;
@@ -30,6 +30,7 @@ namespace ERS_Projekat
             InitializeDevices();
         }
 
+        /*for testing purposes, to bypass regulator config*/
         public FunctionHandler(bool testing)
         {
             InitializeHeater();
@@ -44,6 +45,8 @@ namespace ERS_Projekat
         internal Heater Heater { get => heater; set => heater = value; }
         public bool stopRequested { get; private set; } = false;
         internal Regulator Regulator { get => regulator; set => regulator = value; }
+        public static int CheckTime { get => checkTime; set => checkTime = value; }
+        public static int TempChangeTime { get => tempChangeTime; set => tempChangeTime = value; }
 
         public bool ChangeFuel(Heater h, double newConstant)
         {
@@ -143,7 +146,7 @@ namespace ERS_Projekat
                     
                     checkCounter++;
 
-                    if (checkTime == checkCounter)
+                    if (CheckTime == checkCounter)
                     {
                         Regulator.TemperatureControl(heater);
                         checkCounter = 0;
@@ -153,7 +156,7 @@ namespace ERS_Projekat
                     {
                         offCounter = 0;
                         onCounter++;
-                        if (tempChangeTime == onCounter)
+                        if (TempChangeTime == onCounter)
                         {
                             Regulator.SendHeaterIsOn(heater);
                             onCounter = 0; // Reset the onCounter only after sending the signal
@@ -163,7 +166,7 @@ namespace ERS_Projekat
                     {
                         onCounter = 0; // Reset the onCounter if the heater is off
                         offCounter++;
-                        if (tempChangeTime == offCounter)
+                        if (TempChangeTime == offCounter)
                         {
                             Regulator.SendHeaterIsOff(heater);
                             offCounter = 0; // Reset the onCounter only after sending the signal
@@ -185,8 +188,11 @@ namespace ERS_Projekat
 
         public bool ChangeIntervals(int ct,int tct)
         {
-            checkTime = ct;
-            tempChangeTime = tct;
+            if (ct <= 0 || tct <= 0)
+                return false;
+
+            CheckTime = ct;
+            TempChangeTime = tct;
             return true;
         }
     }

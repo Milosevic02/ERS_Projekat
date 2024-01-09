@@ -35,7 +35,7 @@ namespace ERS_Projekat
 
         public void GetCommand()
         {
-
+            commandEnd = false;
             do
             {
 
@@ -45,7 +45,7 @@ namespace ERS_Projekat
                     if (x < 1 || x > commandNum)
                     {
                         Console.WriteLine();
-                        throw new Exception();
+                        throw new FormatException();
                     }
 
 
@@ -107,19 +107,12 @@ namespace ERS_Projekat
                             bool c6Success = false;
                             do
                             {
-                                Console.WriteLine("Unesite novi interval za proveru temperature (u sekundama):");
+                                
                                 try
                                 {
+                                    Console.WriteLine("Unesite novi interval za proveru temperature (u sekundama):");
                                     a = int.Parse(Console.ReadLine());
-                                    c6Success = true;
-                                }
-                                catch (FormatException)
-                                {
-                                    Console.WriteLine("Konstanta nije validna! Pokusajte opet");
-                                }
-                                Console.WriteLine("Unesite novi interval za rad sa uređajima (u sekundama):");
-                                try
-                                {
+                                    Console.WriteLine("Unesite novi interval za rad sa uređajima (u sekundama):");
                                     b = int.Parse(Console.ReadLine());
                                     c6Success = true;
                                 }
@@ -127,20 +120,17 @@ namespace ERS_Projekat
                                 {
                                     Console.WriteLine("Konstanta nije validna! Pokusajte opet");
                                 }
+                              
                             } while (c6Success != true);
                             functionHandler.ChangeIntervals(a, b);
                             commandEnd = true;
                             break;
-
-                        default:
-                            break;
                     }
 
                 }
-                catch (Exception)
+                catch (FormatException)
                 {
                     Console.WriteLine("Nepoznata komanda, probajte opet");
-
 
                 }
             } while (commandEnd != true);

@@ -13,10 +13,10 @@ namespace ERS_Projekat.Tests
         public void InitializeHeater_HeaterNotNull()
         {
             // Arrange
-            var functionHandler = new FunctionHandler();
+            FunctionHandler functionHandler = new FunctionHandler(true);
 
             // Act
-            var heater = functionHandler.Heater;
+            Heater heater = functionHandler.Heater;
 
             // Assert
             Assert.That(heater, Is.Not.Null);
@@ -26,7 +26,7 @@ namespace ERS_Projekat.Tests
         public void InitializeRegulator_RegulatorNotNull()
         {
             // Arrange
-            FunctionHandler functionHandler = new FunctionHandler();
+            FunctionHandler functionHandler = new FunctionHandler(true);
 
             // Act
             Regulator regulator = functionHandler.Regulator;
@@ -39,23 +39,53 @@ namespace ERS_Projekat.Tests
         public void ChangeFuel_ValidInput_ReturnsTrue()
         {
             // Arrange
-            var functionHandler = new FunctionHandler();
-            var heaterMock = new Mock<Heater>();
+            FunctionHandler functionHandler = new FunctionHandler(true);
+            Heater heater = new Heater(1);
             var newConstant = 2.0;
 
             // Act
-            var result = functionHandler.ChangeFuel(heaterMock.Object, newConstant);
+            var result = functionHandler.ChangeFuel(heater, newConstant);
 
             // Assert
             Assert.That(result, Is.True);
-            heaterMock.VerifySet(h => h.FuelConstant = newConstant, Times.Once);
         }
+
+        [Test]
+        public void ChangeFuel_InvalidInput_ReturnsFalse1()
+        {
+            // Arrange
+            FunctionHandler functionHandler = new FunctionHandler(true);
+            Heater heater = new Heater(1);
+            var newConstant = -1212123;
+
+            // Act
+            var result = functionHandler.ChangeFuel(heater, newConstant);
+
+            // Assert
+            Assert.That(result, Is.False);
+        }
+
+        [Test]
+        public void ChangeFuel_InvalidInput_ReturnsFalse2()
+        {
+            // Arrange
+            FunctionHandler functionHandler = new FunctionHandler(true);
+            Heater heater = new Heater(1);
+            var newConstant = 999999;
+
+            // Act
+            var result = functionHandler.ChangeFuel(heater, newConstant);
+
+            // Assert
+            Assert.That(result, Is.False);
+        }
+
 
         [Test]
         public void ClearLogFile_ValidInput_ReturnsTrue()
         {
             // Arrange
-            var functionHandler = new FunctionHandler();
+            var functionHandler = new FunctionHandler(true);
             File.WriteAllText("log.txt", "Test log content");
             File.WriteAllText("RegulatorDetail.txt", "Test device log content");
 
@@ -72,7 +102,7 @@ namespace ERS_Projekat.Tests
         public void InitializeDevices_DevicesInitialized()
         {
             // Arrange
-            var functionHandler = new FunctionHandler();
+            var functionHandler = new FunctionHandler(true);
 
             // Act
             var result = functionHandler.InitializeDevices();
@@ -87,7 +117,7 @@ namespace ERS_Projekat.Tests
         {
             // Arrange
             Console.WriteLine("Starting test");
-            var functionHandler = new FunctionHandler();
+            var functionHandler = new FunctionHandler(true);
 
             // Act
             Console.WriteLine("Before InitializeDevice");

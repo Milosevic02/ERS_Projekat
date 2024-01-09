@@ -1,6 +1,0 @@
-Start time: [8.1.2024. 22:26:02]; On-time: [00:00:00.0019997]; Fuel used: 0,00099985
-
-Start time: [8.1.2024. 22:26:02]; On-time: [00:00:00]; Fuel used: 0
-
-Start time: [8.1.2024. 22:26:02]; On-time: [00:00:00]; Fuel used: 0
-

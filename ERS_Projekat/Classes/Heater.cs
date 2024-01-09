@@ -40,9 +40,15 @@ namespace ERS_Projekat
         public bool TurnOff()
         {
             elapsedTime = DateTime.Now - startTime;
-            fuelUsed = fuelConstant*elapsedTime.TotalSeconds;
+            if(Flag)
+                fuelUsed = fuelConstant*elapsedTime.TotalSeconds;
+            else
+                fuelUsed = 0;
+
             WriteToFile(logFilePath);
-            fuelUsed = 0;
+
+            startTime = DateTime.Now;
+            elapsedTime = TimeSpan.Zero;
             Flag = false;
             return true;
         }

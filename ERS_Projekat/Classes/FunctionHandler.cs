@@ -20,12 +20,22 @@ namespace ERS_Projekat
         Heater heater = null;
         Regulator regulator = null;
 
+        public bool testing;
+
 
         public FunctionHandler()
         {
             InitializeHeater();
-            InitializeRegulator();
+            InitializeRegulator(false);
             InitializeDevices();
+        }
+
+        public FunctionHandler(bool testing)
+        {
+            InitializeHeater();
+            InitializeRegulator(testing);
+            InitializeDevices();
+
         }
 
         readonly string logFilePath = "log.txt";
@@ -37,6 +47,8 @@ namespace ERS_Projekat
 
         public bool ChangeFuel(Heater h, double newConstant)
         {
+            if (newConstant <= 0 || newConstant > 100)
+                return false;
             h.FuelConstant = newConstant; 
             return true;
         }
@@ -88,13 +100,16 @@ namespace ERS_Projekat
             return true;
         }
 
-        public bool InitializeRegulator()
+        public bool InitializeRegulator(bool testing)
         {
-            Regulator = new Regulator(0,0,DateTime.Now,DateTime.Now);
+            Regulator = new Regulator(19.0, 22.0, DateTime.Parse("8:00"), DateTime.Parse("18:00"));
+            if (testing) {
+                return true;
+            }
+            
             if (Regulator.Settings())
                 return true;
-            else
-            Regulator = new Regulator(0, 0, DateTime.Now, DateTime.Now);
+
             return false;
         }
 

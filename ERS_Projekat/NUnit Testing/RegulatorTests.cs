@@ -7,44 +7,59 @@ namespace ERS_Projekat.Tests
     [TestFixture]
     public class RegulatorTests
     {
+       
         [Test]
-        public void TemperatureControl_DayMode_TurnsOnHeater()
+        public void TemperatureControl_TemperatureHigh()
         {
             // Arrange
-            var heaterMock = new Mock<IHeater>();
-            var regulator = new Regulator(25.0, 20.0, DateTime.Parse("06:00"), DateTime.Parse("18:00"));
+            Heater heater = new Heater(1);
+            Regulator regulator = new Regulator(20.0, 20.0, DateTime.Parse("08:00"), DateTime.Parse("17:00"));
 
             // Use a concrete implementation of Device for testing
-            var concreteDevice = new Device(1);
-            concreteDevice.Temperature = 22.0;
+            Device concreteDevice = new Device(1);
+            concreteDevice.Temperature = 25.0; //above target
 
             regulator.AddDevice(concreteDevice);
 
             // Act
-            regulator.TemperatureControl((Heater)heaterMock.Object);
+            regulator.TemperatureControl(heater);
 
             // Assert
-            Assert.That(() => heaterMock.Verify(h => h.TurnOn(), Times.Once), Throws.Nothing);
+            Assert.That(heater.Flag, Is.False);
+        }
+        [Test]
+        public void TemperatureControl_TemperatureLow()
+        {
+            // Arrange
+            Heater heater = new Heater(1);
+            Regulator regulator = new Regulator(20.0, 20.0, DateTime.Parse("08:00"), DateTime.Parse("17:00"));
+
+            // Use a concrete implementation of Device for testing
+            Device concreteDevice = new Device(1);
+            concreteDevice.Temperature = 15.0; //below target
+
+            regulator.AddDevice(concreteDevice);
+
+            // Act
+            regulator.TemperatureControl(heater);
+
+            // Assert
+            Assert.That(heater.Flag, Is.True);
         }
 
         [Test]
-        public void TemperatureControl_NightMode_TurnsOffHeater()
+        public void Add_Then_Remove_Devices()
         {
-            // Arrange
-            var heaterMock = new Mock<Heater>(1);
-            var regulator = new Regulator(25.0, 20.0, DateTime.Parse("00:00"), DateTime.Parse("00:00"));//for night mode
+            //Arrange
+            Regulator regulator = new Regulator(20.0, 20.0, DateTime.Parse("08:00"), DateTime.Parse("17:00"));
+            Device concreteDevice = new Device(1);
 
-            // Use a concrete implementation of Device for testing
-            var concreteDevice = new Device(1);
-            concreteDevice.Temperature = 18.0;
-
+            //Act & Assert
             regulator.AddDevice(concreteDevice);
+            Assert.That(regulator.Devices,Is.Not.Empty);
+            regulator.RemoveDevice(concreteDevice);
+            Assert.That(regulator.Devices, Is.Empty);
 
-            // Act
-            regulator.TemperatureControl(heaterMock.Object);
-
-            // Assert
-            Assert.That(() => heaterMock.Verify(h => h.TurnOff(), Times.Once), Throws.Nothing);
         }
 
         [Test]

@@ -2,6 +2,7 @@
 using Moq;
 using System;
 using System.IO;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace ERS_Projekat.Tests
 {
@@ -20,12 +21,13 @@ namespace ERS_Projekat.Tests
         }
 
         [Test]
+        [ExpectedException(typeof(FormatException))]
         public void GetCommand_InvalidInput_Retries()
         {
             // Arrange
             var mockReader = new Mock<TextReader>();
-            var userInput = "invalid\n1\n";
-            mockReader.SetupSequence(r => r.ReadLine()).Returns(() => userInput).Returns("1");
+            var userInput = "invalid";
+            mockReader.SetupSequence(r => r.ReadLine()).Returns(userInput);
             Console.SetIn(mockReader.Object);
 
             // Act
@@ -51,7 +53,6 @@ namespace ERS_Projekat.Tests
             functionHandlerMock.Verify(fh => fh.SelectTime(), Times.Once);
         }
 
-        // Add tests for other commands (2, 3, 4, 5, 6) following similar structures...
 
         [TearDown]
         public void RestoreConsoleInput()

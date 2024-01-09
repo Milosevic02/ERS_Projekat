@@ -32,22 +32,28 @@ namespace ERS_Projekat
 
         public bool Settings()
         {
-            try
+            bool good = false;
+            do
             {
-                Console.WriteLine("Unesi od kada ti zapocinje dan (format - hh:mm):");
-                DayStart = DateTime.Parse(Console.ReadLine());
-                Console.WriteLine("Unesi do kada ti traje dan (format - hh:mm):");
-                DayEnd = DateTime.Parse(Console.ReadLine());
-                Console.WriteLine("Unesi koju temperaturu zelis preko dana:");
-                dayTemperature = Double.Parse(Console.ReadLine());
-                Console.WriteLine("Unesi koju temperaturu zelis preko noci:");
-                nightTemperature = Double.Parse(Console.ReadLine());
-            }
-            catch (FormatException e)
-            {
-                Console.WriteLine("Error while parsing: {0}",e.Message);
-                return false;
-            }
+
+                try
+                {
+                    Console.WriteLine("Unesi od kada ti zapocinje dan (format - hh:mm):");
+                    DayStart = DateTime.Parse(Console.ReadLine());
+                    Console.WriteLine("Unesi do kada ti traje dan (format - hh:mm):");
+                    DayEnd = DateTime.Parse(Console.ReadLine());
+                    Console.WriteLine("Unesi koju temperaturu zelis preko dana:");
+                    dayTemperature = Double.Parse(Console.ReadLine());
+                    Console.WriteLine("Unesi koju temperaturu zelis preko noci:");
+                    nightTemperature = Double.Parse(Console.ReadLine());
+                    good = true;
+                }
+                catch (FormatException e)
+                {
+                    Console.WriteLine("Greska prilikom unosa, pokusajte opet");
+                    //Console.WriteLine("Parsing error: {0}",e.Message);
+                }
+            } while (!good);
             
             return true;
         }

@@ -8,7 +8,7 @@ namespace ERS_Projekat
 {
     internal interface IFunctionHandler
     {
-        bool InitializeRegulator();
+        bool InitializeRegulator(bool testing);
         Device InitializeDevice();
         bool InitializeHeater();
 

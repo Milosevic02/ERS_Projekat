@@ -131,7 +131,10 @@ namespace ERS_Projekat
                 catch (FormatException)
                 {
                     Console.WriteLine("Nepoznata komanda, probajte opet");
-
+                }
+                catch (ArgumentNullException)
+                {
+                    //Console.WriteLine("Nepoznata komanda, probajte opet");
                 }
             } while (commandEnd != true);
         }

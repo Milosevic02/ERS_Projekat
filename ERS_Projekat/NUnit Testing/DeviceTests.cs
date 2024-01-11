@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using Moq;
+using NUnit.Framework;
 
 namespace ERS_Projekat.Tests
 {
@@ -22,8 +23,8 @@ namespace ERS_Projekat.Tests
         public void Constructor_GeneratesRandomTemperatureInRange()
         {
             // Arrange
-            double minTemperature = 19.0;
-            double maxTemperature = 23.0;
+            double minTemperature = 15.0;
+            double maxTemperature = 19.0;
 
             // Act
             var device = new Device(1);
@@ -32,6 +33,16 @@ namespace ERS_Projekat.Tests
             // Assert
             Assert.That(generatedTemperature, Is.GreaterThanOrEqualTo(minTemperature));
             Assert.That(generatedTemperature, Is.LessThanOrEqualTo(maxTemperature));
+        }
+        [TearDown]
+        public void TearDown()
+        {
+            Mock<FunctionHandler> functionHandlerMock = new Mock<FunctionHandler>(true);
+
+            functionHandlerMock.Object.ClearLogFile();
+
+            functionHandlerMock = null;
+
         }
 
 

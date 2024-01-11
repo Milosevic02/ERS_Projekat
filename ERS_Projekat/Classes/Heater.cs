@@ -24,7 +24,7 @@ namespace ERS_Projekat
             this.fuelConstant = fuelConstant;
             flag = false;
             startTime = DateTime.Now;
-            elapsedTime = DateTime.Now-startTime;
+            elapsedTime = TimeSpan.Zero;
         }
 
         public double FuelConstant { get => fuelConstant; set => fuelConstant = value; }

@@ -1,0 +1,86 @@
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\ERS_Projekat.exe.config
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\ERS_Projekat.exe
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\ERS_Projekat.pdb
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\obj\Debug\ERS_Projekat.csproj.AssemblyReference.cache
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\obj\Debug\ERS_Projekat.csproj.SuggestedBindingRedirects.cache
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\obj\Debug\ERS_Projekat.csproj.CoreCompileInputs.cache
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\obj\Debug\ERS_Projekat.exe
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\obj\Debug\ERS_Projekat.pdb
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\ERS_Projekat.exe.config
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\ERS_Projekat.exe
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\ERS_Projekat.pdb
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\obj\Debug\ERS_Projekat.csproj.AssemblyReference.cache
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\obj\Debug\ERS_Projekat.csproj.CoreCompileInputs.cache
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\obj\Debug\ERS_Projekat.exe
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\obj\Debug\ERS_Projekat.pdb
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\nunit.framework.dll
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\nunit.framework.legacy.dll
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\nunit.framework.xml
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\nunit.framework.legacy.xml
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\obj\Debug\ERS_Projekat.csproj.CopyComplete
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\Castle.Core.dll
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\Moq.dll
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\Castle.Core.xml
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\Moq.xml
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\NUnit3.TestAdapter.dll
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\NUnit3.TestAdapter.pdb
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\nunit.engine.dll
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\nunit.engine.api.dll
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\nunit.engine.core.dll
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\testcentric.engine.metadata.dll
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\cs\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\de\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\fr\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\it\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\ja\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\ko\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\pl\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\pt-BR\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\ru\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\tr\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\zh-Hans\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\PC\Documents\GitHub\ERS_Projekat\ERS_Projekat\bin\Debug\zh-Hant\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\NUnit3.TestAdapter.dll
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\nunit.engine.dll
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\nunit.engine.api.dll
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\nunit.engine.core.dll
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\testcentric.engine.metadata.dll
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\Castle.Core.dll
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\Moq.dll
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\nunit.framework.dll
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\nunit.framework.legacy.dll
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\Castle.Core.xml
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\Moq.xml
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\nunit.framework.xml
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\nunit.framework.legacy.xml
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\cs\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\de\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\es\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\fr\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\it\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\ja\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\ko\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\pl\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\pt-BR\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\ru\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\tr\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\zh-Hans\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\bin\Debug\zh-Hant\Microsoft.VisualStudio.TestPlatform.TestFramework.resources.dll
+C:\Users\milos\OneDrive\Documents\Faculty\5. Semestar\Elementi Razvoja Softvera\ERS_Projekat\ERS_Projekat\obj\Debug\ERS_Projekat.csproj.CopyComplete

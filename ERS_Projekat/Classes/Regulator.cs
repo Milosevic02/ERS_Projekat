@@ -42,11 +42,40 @@ namespace ERS_Projekat
                     DayStart = DateTime.Parse(Console.ReadLine());
                     Console.WriteLine("Unesi do kada ti traje dan (format - hh:mm):");
                     DayEnd = DateTime.Parse(Console.ReadLine());
-                    Console.WriteLine("Unesi koju temperaturu zelis preko dana:");
-                    dayTemperature = Double.Parse(Console.ReadLine());
-                    Console.WriteLine("Unesi koju temperaturu zelis preko noci:");
-                    nightTemperature = Double.Parse(Console.ReadLine());
-                    good = true;
+                    bool day_flag = true;
+                    do
+                    {
+                        Console.WriteLine("Unesi koju temperaturu zelis preko dana (Minimalna 10 - Maximalna 30):");
+                        dayTemperature = Double.Parse(Console.ReadLine());
+                        if (dayTemperature > 30 || dayTemperature < 10)
+                        {
+                            Console.WriteLine("Greska prilikom unosa, pokusajte opet");
+
+                        }
+                        else
+                        {
+                            day_flag = false; ;
+
+                        }
+                    } while(day_flag);
+                    bool night_flag = true;
+                    do
+                    {
+                        Console.WriteLine("Unesi koju temperaturu zelis preko noci (Minimalna 10 - Maximalna 30):");
+                        nightTemperature = Double.Parse(Console.ReadLine());
+                        if (nightTemperature < 10 || nightTemperature > 30)
+                        {
+                            Console.WriteLine("Greska prilikom unosa, pokusajte opet");
+                        }
+                        else
+                        {
+                            night_flag = false;
+
+                        }
+                    } while(night_flag);
+                   good = true;
+                    
+                   
                 }
                 catch (FormatException e)
                 {

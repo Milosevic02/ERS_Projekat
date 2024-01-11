@@ -173,5 +173,15 @@ namespace ERS_Projekat.Tests
             // Assert
             Assert.That(result, Is.False);
         }
+
+        [TearDown]
+        public void TearDown() {
+            Mock<FunctionHandler> functionHandlerMock = new Mock<FunctionHandler>(true);
+
+            functionHandlerMock.Object.ClearLogFile();
+
+            functionHandlerMock = null;
+
+        }
     }
 }

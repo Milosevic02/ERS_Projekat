@@ -16,7 +16,7 @@ namespace ERS_Projekat
         public Device(int id)
         {
             this.Id = id;
-            temperature = r.NextDouble() + r.Next(19,23);
+            temperature = r.NextDouble() + r.Next(15,20);
             Thread.Sleep(100); //for synchronizing rng seed 
         }
 

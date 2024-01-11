@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using Moq;
+using NUnit.Framework;
 using System;
 using System.IO;
 using System.Threading;
@@ -46,6 +47,7 @@ namespace ERS_Projekat.Tests
 
             // Assert
             Assert.That(heater.Flag, Is.False);
+
         }
 
         [Test]
@@ -75,6 +77,17 @@ namespace ERS_Projekat.Tests
 
             // Assert
             Assert.That(File.Exists("log.txt"), Is.True);
+        }
+
+        [TearDown]
+        public void TearDown()
+        {
+            Mock<FunctionHandler> functionHandlerMock = new Mock<FunctionHandler>(true);
+
+            functionHandlerMock.Object.ClearLogFile();
+
+            functionHandlerMock = null;
+
         }
     }
 }
